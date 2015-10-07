@@ -1,0 +1,49 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             text, CODE, READONLY
+    2 00000000                 EXPORT           example1
+    3 00000000         
+    4 00000000         example1
+                               FUNCTION
+    5 00000000 F04F 0010       MOV              R0, #16
+    6 00000004 4770            BX               LR          ;
+    7 00000006                 ENDFUNC
+    8 00000006         
+    9 00000006                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
+erwork --depend=.\object\test.d -o.\object\test.o -I"\campus.mcgill.ca\emf\cpe\
+ptruon4\Desktop\temp\Microprocessor-Fall-2015\Lab1\Lab 1 Base Project\RTE" -I"\
+campus.mcgill.ca\emf\cpe\ptruon4\Desktop\temp\Microprocessor-Fall-2015\Lab1\Lab
+ 1 Base Project\RTE\Device\STM32F407VG" -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\C
+MSIS\Include -IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include --pr
+edefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 515" --predefin
+e="_RTE_ SETA 1" --predefine="STM32F40_41xxx SETA 1" --list=.\listings\test.lst
+ test.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+example1 00000000
+
+Symbol: example1
+   Definitions
+      At line 4 in file test.s
+   Uses
+      At line 2 in file test.s
+Comment: example1 used once
+text 00000000
+
+Symbol: text
+   Definitions
+      At line 1 in file test.s
+   Uses
+      None
+Comment: text unused
+2 symbols
+337 symbols in table
